@@ -1,0 +1,14 @@
+body .field {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 12px;
+}
+
+body .field-group {
+    display: flex;
+}
+
+body .field-group .field + .field {
+    margin-left: 12px;
+}
