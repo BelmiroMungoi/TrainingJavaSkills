@@ -1,0 +1,13 @@
+
+form{
+    border:.5px solid #fff;
+    background:white;
+    border-radius:10px;
+    box-sizing:border-box;
+    padding-top:25px;
+    padding-bottom:10%;
+    margin:5% auto;
+    text-align:center; 
+    margin-top: 180px;
+    max-width:450px;
+}
