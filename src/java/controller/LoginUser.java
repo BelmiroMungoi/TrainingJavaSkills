@@ -17,7 +17,6 @@ import javax.servlet.http.HttpSession;
 @WebServlet("/LoginUser")
 public class LoginUser extends HttpServlet {
 
-
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -30,15 +29,15 @@ public class LoginUser extends HttpServlet {
             UserBeans beans = new UserBeans();
             beans.setUserName(userName);
             beans.setPassword(password);
-
+            String url = request.getParameter("url");
             HttpServletRequest servletRequest = (HttpServletRequest) request;
             HttpSession session = servletRequest.getSession();
             session.setAttribute("user", beans);
 
-            RequestDispatcher dispatcher = request.getRequestDispatcher("/index.jsp");
+            RequestDispatcher dispatcher = request.getRequestDispatcher("/jsp/index.jsp");
             dispatcher.forward(request, response);
-        } else {
-            RequestDispatcher dispatcher = request.getRequestDispatcher("/index.jsp");
+    } else {
+            RequestDispatcher dispatcher = request.getRequestDispatcher("/login.jsp");
             dispatcher.forward(request, response);
         }
     }
