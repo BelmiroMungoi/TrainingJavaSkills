@@ -14,15 +14,14 @@
         <title>Acesso Ao Sistema</title>
     </head>
     <body>
-        <form action="LoginUser" method="post">
+        <form action="LoginUser" method="post" autocomplete="off" id="form_login">
             <h1>Iniciar Sessão</h1>
             <div class="field">
-                <input type="text" id="nome" name="nome"
-                       placeholder="Nome do Usuario">
+                <input type="hidden" id="url" name="url" value="<%= request.getParameter("url")%>">
+                <input type="text" id="nome" name="nome" placeholder="Nome do Usuario">
             </div>
             <div class="field">
-                <input type="password" id="pass" name="pass" 
-                       placeholder="Insira a sua senha">
+                <input type="password" id="pass" name="pass" placeholder="Insira a sua senha">
             </div>
             <button type="submit">Entrar</button>
         </form>
