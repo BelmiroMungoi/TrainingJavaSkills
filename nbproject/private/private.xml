@@ -3,11 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Freeware%20Sys/Documents/Meus%20Projectos/TrainingJavaSkills/src/java/com/trainingjavaskills/filter/AuthFilter.java</file>
+            <file>file:/C:/Users/Freeware%20Sys/Documents/Meus%20Projectos/TrainingJavaSkills/src/java/filter/AuthFilter.java</file>
+            <file>file:/C:/Users/Freeware%20Sys/Documents/Meus%20Projectos/TrainingJavaSkills/src/java/controller/LoginUser.java</file>
             <file>file:/C:/Users/Freeware%20Sys/Documents/Meus%20Projectos/TrainingJavaSkills/web/login.jsp</file>
-            <file>file:/C:/Users/Freeware%20Sys/Documents/Meus%20Projectos/TrainingJavaSkills/src/java/com/trainingjavaskills/model/beans/UserBeans.java</file>
-            <file>file:/C:/Users/Freeware%20Sys/Documents/Meus%20Projectos/TrainingJavaSkills/web/css/login.css</file>
-            <file>file:/C:/Users/Freeware%20Sys/Documents/Meus%20Projectos/TrainingJavaSkills/web/WEB-INF/web.xml</file>
         </group>
     </open-files>
 </project-private>
