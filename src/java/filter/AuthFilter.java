@@ -17,7 +17,7 @@ import javax.servlet.http.HttpSession;
  *
  * @author Belmiro-Mungoi
  */
-@WebFilter(urlPatterns = {"/index.jsp"})
+@WebFilter(urlPatterns = {"/jsp/*"})
 public class AuthFilter implements Filter {
 
     public AuthFilter() {
@@ -31,10 +31,11 @@ public class AuthFilter implements Filter {
         HttpServletRequest servletRequest = (HttpServletRequest) request;
         HttpSession session = servletRequest.getSession();
 
+        String urlAuth = servletRequest.getServletPath();
         UserBeans userBeans = (UserBeans) session.getAttribute("user");
 
-        if(userBeans == null){
-            RequestDispatcher dispatcher = request.getRequestDispatcher("/login.jsp");
+        if (userBeans == null && !urlAuth.equals("/LoginUser")) {
+            RequestDispatcher dispatcher = request.getRequestDispatcher("/login.jsp?url=" + urlAuth);
             dispatcher.forward(request, response);
             return;
         }
