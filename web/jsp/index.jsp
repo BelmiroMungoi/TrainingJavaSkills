@@ -19,13 +19,13 @@
             <div class="field">
                 <a href="jsp/catchExceptions.jsp">Capturar Uma Excepcao</a>
             </div>
-            <div class="field">
-                <a href="jsp/firstPage.jsp">Load Page jQuery</a>
-            </div>
+        </div>
+        <div class="field">
+            <a href="jsp/firstPage.jsp">Load Page jQuery</a>
         </div>
         <div>
             <a href="LoginUser?log=true">LogOut</a>
         </div>
     </center>
-    </body>
+</body>
 </html>
