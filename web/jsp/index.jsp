@@ -23,6 +23,9 @@
         <div class="field">
             <a href="jsp/firstPage.jsp">Load Page jQuery</a>
         </div>
+         <div class="field">
+             <a href="jsp/progressBar.jsp">Progress Bar</a>
+        </div>
         <div>
             <a href="LoginUser?log=true">LogOut</a>
         </div>
