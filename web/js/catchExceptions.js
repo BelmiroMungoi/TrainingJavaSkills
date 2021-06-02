@@ -10,11 +10,11 @@ function teste() {
     })
             .done(function (response) {
                 alert(response);
-        
+
             })
             .fail(function (xhr, status, errorThrown) {
                 alert(xhr.responseText);
-        
+
             });
 }
 
