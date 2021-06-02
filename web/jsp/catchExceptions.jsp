@@ -4,11 +4,11 @@
     Author     : Belmiro-Mungoi
 --%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta charset=UTF-8">
         <script src="../jQueryScripts/jquery.min.js" type="text/javascript"></script>
         <title>Capturando uma Excepcao</title>
     </head>
