@@ -3,7 +3,7 @@ body .field {
     flex: 1;
     display: flex;
     flex-direction: column;
-    margin-bottom: 12px;
+    margin-bottom: 18px;
 }
 
 body .field-group {
@@ -12,4 +12,16 @@ body .field-group {
 
 body .field-group .field + .field {
     margin-left: 12px;
+}
+
+body input{
+    box-sizing: border-box;
+    background-color: #f0f0f5;
+    display: flex;
+    padding: 10px 20px;
+    border: 0;
+    border-radius: 10px;
+    font: 14px Arial, Helvetica, sans-serif;
+    height: 25px;   
+
 }
