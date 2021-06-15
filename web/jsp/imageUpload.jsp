@@ -5,11 +5,12 @@
 --%>
 
 <%@page pageEncoding="UTF-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset=UTF-8">
-        <script src="../jQueryScripts/jquery.min.js" type="text/javascript"></script>
+        <script src="../jQueryScripts/jquery.min-3.1.1.js" type="text/javascript"></script>
         <link href="../css/main.css">
         <title>Upload de Imagens</title>
     </head>
@@ -27,10 +28,19 @@
             </div>
         </div>
         <div class="field">
-            <input type="file" id="upload" name="filee" onchange="uploadImage()">
+            <input type="file" id="upload" name="file" onchange="uploadImage()">
             <img alt="Imagem" src="" width="200px" height="200px">
         </div>
-        <a href="fileUpload">Carregar Imagens</a>
+        <a href="fileUpload?action=load">Carregar Imagens</a>
+        <table>
+            <c:forEach items="${images}" var="user">
+                <tr>
+                    <td>${user.idUser}</td> 
+                    <td>${user.userName}</td>
+                    <td><a href="fileUpload?action=download&idUser=${user.idUser}">Download</a>${user.image}</td>
+                </tr>
+            </c:forEach>
+        </table>
     </center>
 </body>
 <script type="text/javascript" src="../js/imageUpload.js"></script>
