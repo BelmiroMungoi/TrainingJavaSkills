@@ -37,7 +37,7 @@
                 <tr>
                     <td>${user.idUser}</td> 
                     <td>${user.userName}</td>
-                    <td><a href="fileUpload?action=download&idUser=${user.idUser}">Download</a>${user.image}</td>
+                    <td><a href="fileUpload?action=download&idUser=${user.idUser}">Download</a></td>
                 </tr>
             </c:forEach>
         </table>
