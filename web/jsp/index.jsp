@@ -21,7 +21,10 @@
             </div>
         </div>
         <div class="field">
-            <a href="jsp/firstPage.jsp">Load Page jQuery</a>
+            <a href="jsp/firstPage.jsp">Load Page com jQuery</a>
+        </div>
+        <div class="field">
+            <a href="jsp/dataTable.jsp">DataTable jQuery</a>
         </div>
         <div class="field">
             <a href="jsp/imageUpload.jsp">Upload Imagem</a>
@@ -29,6 +32,7 @@
         <div class="field">
             <a href="jsp/progressBar.jsp">Progress Bar</a>
         </div>
+
         <div>
             <a href="LoginUser?log=true">LogOut</a>
         </div>
