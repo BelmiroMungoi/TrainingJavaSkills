@@ -56,6 +56,7 @@ public class DaoUsuario {
                 beans.setUserName(rs.getString("username"));
                 beans.setPassword(rs.getString("password"));
                 beans.setImage(rs.getString("imagem"));
+                beans.setIdade(rs.getInt("idade"));
                 lista.add(beans);
             }
         } catch (SQLException ex) {
