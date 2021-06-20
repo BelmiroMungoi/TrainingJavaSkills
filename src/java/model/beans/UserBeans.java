@@ -10,6 +10,7 @@ public class UserBeans {
     private String userName;
     private String password;
     private String image;
+    private int idade;
 
     public String getUserName() {
         return userName;
@@ -41,6 +42,14 @@ public class UserBeans {
 
     public void setImage(String image) {
         this.image = image;
+    }
+
+    public int getIdade() {
+        return idade;
+    }
+
+    public void setIdade(int idade) {
+        this.idade = idade;
     }
 
 }
