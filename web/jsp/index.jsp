@@ -32,6 +32,9 @@
         <div class="field">
             <a href="jsp/progressBar.jsp">Progress Bar</a>
         </div>
+        <div class="field">
+            <a href="jsp/progressBar.jsp">Relatórios</a>
+        </div>
 
         <div>
             <a href="LoginUser?log=true">LogOut</a>
