@@ -33,7 +33,7 @@
             <a href="jsp/progressBar.jsp">Progress Bar</a>
         </div>
         <div class="field">
-            <a href="jsp/progressBar.jsp">Relatórios</a>
+            <a href="jsp/reports.jsp">Relatórios</a>
         </div>
 
         <div>
