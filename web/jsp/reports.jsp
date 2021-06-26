@@ -13,5 +13,7 @@
     </head>
     <body>
         <h1>Relatórios</h1>
+        <a href="reports?reportType=PDF">PDF</a>
+        <a href="reports?reportType=EXCEL">EXCEL</a>
     </body>
 </html>
