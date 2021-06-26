@@ -25,11 +25,11 @@ public class ReportService implements Serializable {
     //Indica a pasta dos sub-relatóriois
     private static final String SUBREPORTS_DIR = "SUBREPORTS_DIR";
     //Define o separador das pastas / ou \
-    private String SEPARATOR = File.separator;
+    private String separator = File.separator;
     //Indica o caminho do relatório
-    private String REPORT_URL = null;
+    private String reportUrl = null;
     //Indica o caminho do sub-relatório
-    private String SUBREPORT_URL = "";
+    private String subreportUrl = "";
     //Indica o tipo de exportacao pdf/sheets...
     private JRExporter exporter = null;
     //O arquivo que será gerado
@@ -46,38 +46,40 @@ public class ReportService implements Serializable {
         String url = context.getRealPath(FOLDER_REPORTS);
 
         //Traz o ficheiro do relatorio .jasper
-        File file = new File(url + SEPARATOR + reportName + ".jasper");
+        File file = new File(url + separator + reportName + ".jasper");
 
         if (url == null || (url != null && url.isEmpty())
                 || !file.exists()) {
             url = this.getClass().getResource(FOLDER_REPORTS).getPath();
-            SEPARATOR = "";
+            separator = "";
         }
 
         //Caminho para imagens no relatorio
         reportParam.put("REPORT_PARAMETERS_IMG", url);
 
         //indica o caminho completo ate o relatorio
-        String completeURL = url + SEPARATOR + reportName + ".jasper";
+        String completeURL = url + separator + reportName + ".jasper";
 
         //Vai carregar o relatorio
-        JasperReport report = (JasperReport) JRLoader.loadObjectFromFile(completeURL);
+        JasperReport report
+                = (JasperReport) JRLoader.loadObjectFromFile(completeURL);
 
         //Irá setar o caminho SUBREPORT_DIR com o caminho fisico para sub relatorio
-        SUBREPORT_URL = url + SEPARATOR;
-        reportParam.put(SUBREPORTS_DIR, SUBREPORT_URL);
+         subreportUrl = url + separator;
+        reportParam.put(SUBREPORTS_DIR, subreportUrl);
 
         //Vai carregar o ficheiro
-        JasperPrint printer = JasperFillManager.fillReport(reportName, reportParam, dataSource);
+        JasperPrint printer
+                = JasperFillManager.fillReport(report, reportParam, dataSource);
 
         //Define o tipo de ficheiro a ser exportado
         exporter = new JRPdfExporter();
 
         //O caminho do relatorio gerado 
-        REPORT_URL = url + SEPARATOR + finalReport + ".pdf";
+        reportUrl = url + separator + finalReport + ".pdf";
 
         //Cria um novo arquivo ao exportar relatorio
-        reportFile = new File(REPORT_URL);
+        reportFile = new File(reportUrl);
 
         //Prepara a impressao do relatorio
         exporter.setParameter(JRExporterParameter.JASPER_PRINT, printer);
@@ -89,6 +91,6 @@ public class ReportService implements Serializable {
 
         //Remove o arquivo do servidor apos o download
         reportFile.delete();
-        return REPORT_URL;
+        return reportUrl;
     }
 }
