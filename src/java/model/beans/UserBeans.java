@@ -6,7 +6,7 @@ package model.beans;
  */
 public class UserBeans {
 
-    private Integer idUser;
+    private Integer iduser;
     private String userName;
     private String password;
     private String image;
@@ -29,11 +29,11 @@ public class UserBeans {
     }
 
     public Integer getIdUser() {
-        return idUser;
+        return iduser;
     }
 
     public void setIdUser(Integer idUser) {
-        this.idUser = idUser;
+        this.iduser = idUser;
     }
 
     public String getImage() {
