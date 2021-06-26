@@ -7,8 +7,6 @@ import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -37,7 +35,7 @@ public class ReportController extends HttpServlet {
             List dados = new ArrayList();
             dados.add(usuarios);
             String reportUrl = reportService.generateReport(dados, new HashMap(),
-                    "rel_usuario ", "rel_usuario", request.getServletContext());
+                    "rel_usuario", "rel_usuario", request.getServletContext());
 
             //Constroi o caminho do arquivo
             File downloadFile = new File(reportUrl);
@@ -72,7 +70,7 @@ public class ReportController extends HttpServlet {
 
             }
         } catch (Exception ex) {
-            Logger.getLogger(ReportController.class.getName()).log(Level.SEVERE, null, ex);
+            ex.printStackTrace();
         }
 
     }
