@@ -4,6 +4,8 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/bbm29/Documents/GitHub/TrainingJavaSkills/web/jsp/reports.jsp</file>
+            <file>file:/C:/Users/bbm29/Documents/GitHub/TrainingJavaSkills/src/java/model/dao/DaoUsuario.java</file>
+            <file>file:/C:/Users/bbm29/Documents/GitHub/TrainingJavaSkills/src/java/model/beans/UserBeans.java</file>
             <file>file:/C:/Users/bbm29/Documents/GitHub/TrainingJavaSkills/src/java/services/ReportService.java</file>
             <file>file:/C:/Users/bbm29/Documents/GitHub/TrainingJavaSkills/src/java/controller/ReportController.java</file>
         </group>
