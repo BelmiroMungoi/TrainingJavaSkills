@@ -4,7 +4,6 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.OutputStream;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import javax.servlet.ServletException;
@@ -32,9 +31,8 @@ public class ReportController extends HttpServlet {
         try {
             String reportType = request.getParameter("reportType");
             List<UserBeans> usuarios = daoUsuario.listarUsuario();
-            List dados = new ArrayList();
-            dados.add(usuarios);
-            String reportUrl = reportService.generateReport(dados, new HashMap(),
+            
+            String reportUrl = reportService.generateReport(usuarios, new HashMap(),
                     "rel_usuario", "rel_usuario", request.getServletContext());
 
             //Constroi o caminho do arquivo
