@@ -18,19 +18,25 @@
         <h1>Calculo de Datas</h1> 
         <form action="calcularData" method="post">
             <label for="initialDate">Data Inicial:</label>
-            <input type="text" id="init" name="initialDate">
+            <input type="text" id="initialDate" name="initialDate">
+
             <label for="finalDate">Tempo Em Horas</label>
             <input type="text" id="time" name="time">
+
             <button type="submit">Calcular</button>
         </form>
         <br/>
-        <label for="finalDate">Data Final</label> 
+        <label for="finalDate">Data Final:</label> 
         <input type="text" id="final" name="finalDate" readonly="readonly" 
                value="${finalData}">
+
+        <label for="dias">Total de Dias:</label> 
+        <input type="text" id="dias" name="dias" readonly="readonly" value="${dias}">
+        
     </body>
     <script>
         $( function() {
-            $( "#init" ).datepicker({dateFormat: 'dd/mm/yy'});
+            $( "#initialDate" ).datepicker({dateFormat: 'dd/mm/yy'});
         } );
     </script>
 </html>
