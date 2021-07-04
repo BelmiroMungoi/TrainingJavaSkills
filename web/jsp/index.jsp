@@ -36,6 +36,9 @@
             <a href="jsp/progressBar.jsp">Progress Bar</a>
         </div>
         <div class="field">
+            <a href="jsp/calendar.jsp">Calendário</a>
+        </div>
+        <div class="field">
             <a href="jsp/reports.jsp">Relatórios</a>
         </div>
 
