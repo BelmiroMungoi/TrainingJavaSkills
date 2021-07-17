@@ -13,7 +13,8 @@
         <link rel="stylesheet" href="../css/codepen.css">
         <link rel="stylesheet" href="../css/fullCalendar-main.css">
         <script type="text/javascript" src="../js/fullCalendar-main.js"></script>
-        <script type="text/javascript" src="../js/codepen.js"></script>     
+        <script type="text/javascript" src="../js/codepen.js"></script>   
+        <script type="text/javascript" src="../jQueryScripts/jquery-3.3.1.js"></script>
         <style>
 
             html, body {
@@ -38,19 +39,26 @@
 
     </body>
     <script>
-
+        
+  
         document.addEventListener('DOMContentLoaded', function() {
+            $.get("buscarCalendario", function(response) {
+            
             var calendarEl = document.getElementById('calendar');
-
-            var calendar = new FullCalendar.Calendar(calendarEl, {
-                timeZone: 'UTC',
-                initialView: 'dayGridMonth',
-                events: 'https://fullcalendar.io/demo-events.json',
-                editable: true,
-                selectable: true
-            });
-
-            calendar.render();
+            alert(response);
+            var dates = JSON.parse(response);
+            
+            
+                
+                var calendar = new FullCalendar.Calendar(calendarEl, {
+                    timeZone: 'UTC',
+                    initialView: 'dayGridMonth',
+                    events: dates,
+                    editable: true,
+                    selectable: true
+                });    
+                calendar.render();
+            });        
         });
 
     </script>
