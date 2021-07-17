@@ -27,6 +27,10 @@
         <servlet-name>DateController</servlet-name>
         <servlet-class>controller.DateController</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>CalendarController</servlet-name>
+        <servlet-class>controller.CalendarController</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>CatchExceptions</servlet-name>
         <url-pattern>/CatchExceptions</url-pattern>
@@ -42,6 +46,10 @@
     <servlet-mapping>
         <servlet-name>DateController</servlet-name>
         <url-pattern>/DateController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CalendarController</servlet-name>
+        <url-pattern>/CalendarController</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
