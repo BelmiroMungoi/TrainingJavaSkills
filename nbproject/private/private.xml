@@ -3,11 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/bbm29/Documents/GitHub/TrainingJavaSkills/web/jsp/reports.jsp</file>
-            <file>file:/C:/Users/bbm29/Documents/GitHub/TrainingJavaSkills/src/java/model/dao/DaoUsuario.java</file>
-            <file>file:/C:/Users/bbm29/Documents/GitHub/TrainingJavaSkills/src/java/model/beans/UserBeans.java</file>
-            <file>file:/C:/Users/bbm29/Documents/GitHub/TrainingJavaSkills/src/java/services/ReportService.java</file>
-            <file>file:/C:/Users/bbm29/Documents/GitHub/TrainingJavaSkills/src/java/controller/ReportController.java</file>
+            <file>file:/C:/Users/bbm29/Documents/GitHub/TrainingJavaSkills/web/js/catchExceptions.js</file>
+            <file>file:/C:/Users/bbm29/Documents/GitHub/TrainingJavaSkills/web/jsp/calendar.jsp</file>
+            <file>file:/C:/Users/bbm29/Documents/GitHub/TrainingJavaSkills/src/java/controller/DateController.java</file>
+            <file>file:/C:/Users/bbm29/Documents/GitHub/TrainingJavaSkills/src/java/controller/CalendarController.java</file>
         </group>
     </open-files>
 </project-private>
