@@ -1,11 +1,14 @@
 package controller;
 
 import java.io.IOException;
+import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import model.beans.Eventos;
+import model.dao.DaoEventos;
 
 /**
  *
@@ -14,17 +17,28 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/jsp/buscarCalendario")
 public class CalendarController extends HttpServlet {
 
+    private DaoEventos daoEventos = new DaoEventos();
+
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        System.out.println("adhheuwwen");
-        String dates = "[{ "
-                + "\"title\": \"Fazer o jantar\","
-                + "\"start\": \"2021-07-16\","
-                + "\"end\": \"2021-07-17\""
-                + " }]";
-        response.setStatus(200);
-        response.getWriter().write(dates);
+
+        List<Eventos> lista = daoEventos.getEventos();
+        String dates = "[";
+
+        if (!lista.isEmpty()) {
+            for (Eventos eventos : lista) {
+                dates += "{"
+                        + "\"title\": \""+eventos.getDescricao()+"\","
+                        + "\"start\": \""+eventos.getInicio()+"\","
+                        + "\"end\": \""+eventos.getFim()+"\""
+                        + " }";
+            }
+            dates += "]";
+            response.setStatus(200);
+            response.getWriter().write(dates);
+        }
+
     }
 
     @Override
